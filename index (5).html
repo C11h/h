@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sklep Wędkarski</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    select {
+      width: 200px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    option {
+      font-size: 14px;
+    }
+    
+    select:hover {
+      overflow: visible;
+    }
+
+img {
+      max-width: 100%;
+      max-height: 80vh;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <select id="menu" onchange="navigateMenu(this.value)">
+    <option value="">Menu</option>
+    <option value="splawiki">Spławiki</option>
+    <option value="wedki">Wędki</option>
+    <option value="zanety">Zanęty</option>
+    <option value="kolowrotki">Kołowrotki</option>
+  </select>
+<br>
+<img src="ryba.jfif" alt="ryba">
+  <script>
+    function navigateMenu(option) {
+      if (option === "splawiki") {
+        window.location.href = "splawiki.html";
+      } else if (option === "wedki") {
+        window.location.href = "wędki.html";
+      } else if (option === "zanety") {
+        window.location.href = "zanety.html";
+      } else if (option === "kolowrotki") {
+        window.location.href = "kolowrotki.html";
+      }
+    }
+  </script>
+
+</body>
+</html>
